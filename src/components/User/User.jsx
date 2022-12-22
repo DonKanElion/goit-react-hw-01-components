@@ -1,14 +1,4 @@
-// import user from '../User/';
 
-{
-  /* <Profile
-  username={user.username}
-  tag={user.tag}
-  location={user.location}
-  avatar={user.avatar}
-  stats={user.stats}
-/> */
-}
 
 const user = {
   username: 'Jacques Gluke',
@@ -25,7 +15,7 @@ const user = {
 export const UserProfile = (props) => {
   console.log("UserProfile - PROPS start", props);
 
-  const { username, tag, location, avatar } = props;
+  const { username, tag, location, avatar, followers, views, likes } = props;
 
   console.log("UserProfile - PROPS destruct", props);
 
@@ -41,15 +31,15 @@ export const UserProfile = (props) => {
       <ul class="stats">
         <li>
           <span class="label">Followers</span>
-          <span class="quantity">1000</span>
+          <span class="quantity">{followers}</span>
         </li>
         <li>
           <span class="label">Views</span>
-          <span class="quantity">2000</span>
+          <span class="quantity">{views}</span>
         </li>
         <li>
           <span class="label">Likes</span>
-          <span class="quantity">3000</span>
+          <span class="quantity">{likes}</span>
         </li>
       </ul>
     </div>
