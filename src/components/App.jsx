@@ -14,3 +14,11 @@ export const App = () => {
     </div>
   );
 };
+
+console.log("App.jsx");
+
+  // {/* <UserProfile 
+  //      username={user.username}
+  //      tag={user.tag}
+  //      location={user.location}
+  //      avatar={user.avatar} */}
