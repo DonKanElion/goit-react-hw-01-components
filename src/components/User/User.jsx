@@ -1,23 +1,16 @@
+import PropTypes from 'prop-types';
+import defaultImages from '../default.jpeg';
 
-
-const user = {
-  username: 'Jacques Gluke',
-  tag: 'jgluke',
-  location: 'Ocho Rios, Jamaica',
-  avatar: 'https://cdn-icons-png.flaticon.com/512/2922/2922506.png',
-  stats: {
-    followers: 5603,
-    views: 4827,
-    likes: 1308,
-  },
-};
-
-export const UserProfile = (props) => {
-  console.log("UserProfile - PROPS start", props);
-
-  const { username, tag, location, avatar, followers, views, likes } = props;
-
-  console.log("UserProfile - PROPS destruct", props);
+const UserProfile = props => {
+  const {
+    username,
+    tag,
+    location,
+    avatar = defaultImages,
+    followers,
+    views,
+    likes,
+  } = props;
 
   return (
     <div class="profile">
@@ -46,11 +39,21 @@ export const UserProfile = (props) => {
   );
 };
 
-// UserProfile.PropType = {
-//   username: PropTypes.string,
-//   tag: PropTypes.string,
-//   location: PropTypes.string,
-//   avatar: PropTypes.string,
-// };
+UserProfile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  // stats.followers: PropTypes.number,
+  // stats.views: PropTypes.number,
+  // stats.likes: PropTypes.number,
 
-// export default UserProfile;
+  // arrayWithShape: React.PropTypes.arrayOf(React.PropTypes.shape({
+  //   color: React.PropTypes.string.isRequired,
+  //   fontSize: React.PropTypes.number.isRequired,
+  // })).isRequired,
+
+};
+
+
+export default UserProfile;

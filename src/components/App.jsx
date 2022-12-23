@@ -2,12 +2,12 @@ export const App = () => {
   return (
     <div
       style={{
-        height: '100vh',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        marginBottom: '20px',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
       }}
     >
       React homework template
@@ -15,4 +15,4 @@ export const App = () => {
   );
 };
 
-console.log("App.jsx");
+console.log('App.jsx');
