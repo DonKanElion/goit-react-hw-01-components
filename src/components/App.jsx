@@ -1,6 +1,6 @@
 export const App = () => {
   return (
-    <div
+    <div class="container"
       style={{
         display: 'flex',
         justifyContent: 'center',
@@ -10,9 +10,7 @@ export const App = () => {
         color: '#010101',
       }}
     >
-      React homework template
+      React 🍓 homework components 🧘
     </div>
   );
 };
-
-console.log('App.jsx');

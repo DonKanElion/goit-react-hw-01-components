@@ -13,7 +13,8 @@ const UserProfile = props => {
   } = props;
 
   return (
-    <div class="profile">
+    <div class="container">
+      <div class="profile">
       <div class="description">
         <img src={avatar} alt="User avatar" class="avatar" />
         <p class="name">{username}</p>
@@ -35,6 +36,7 @@ const UserProfile = props => {
           <span class="quantity">{likes}</span>
         </li>
       </ul>
+    </div>
     </div>
   );
 };
