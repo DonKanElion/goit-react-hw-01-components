@@ -110,7 +110,7 @@ li {
   border-radius: 5px;
 }
 
-.avatar{
+.description avatar{
   justify-content: center;
   width: 200px;
   height: 200px;
@@ -118,7 +118,7 @@ li {
   /* border-radius: 50%; */
 }
 
-.name{
+ .description name{
   margin-bottom: 20px;
   color: black;
   font-weight: 700;
@@ -207,7 +207,7 @@ font-weight: 700;
   background-color: rgba(245, 244, 250, 1);
 }
 
-.item{
+.stat-list li{
   display: flex;
   flex-direction: column;
   flex-basis: auto;
@@ -225,4 +225,51 @@ font-weight: 700;
 
 .percentage{
 
+}
+
+/* ======== FriendsLics =========  */
+
+
+.friend-list{
+width: 220px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.friend-list li{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* text-align: center; */
+
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 10px;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  border: 1px solid ghostwhite;
+  background-color: #ffffff;
+}
+
+.friend-list li:last-child{
+  margin-bottom: 0;
+}
+
+.status{
+  margin-right: 12px;
+}
+
+.friend-list li img{
+  width: 48px;
+  height: 48px;
+  margin-right: 18px;
+  border: 1px solid gray;
+  background-color: teal;
+  border-radius: 5px;
+}
+
+.friend-list li name{
+color: black;
+font-weight: 700;
 }

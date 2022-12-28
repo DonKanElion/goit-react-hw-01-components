@@ -10,17 +10,13 @@ import UserProfile from 'components/User/User';
 import data from './path/data.json';
 import Statistics from 'components/Statistics/Statistics';
 
-// import UserProfile from "./components/User/User";
-
-console.log(user);
-console.log(data);
-
-// const statData = JSON.parse(data);
-// console.log(statData);
+import friends from './path/friends.json';
+import FriendList from 'components/FriendList/FriendList';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
+
     <UserProfile
       username={user.username}
       tag={user.tag}
@@ -33,6 +29,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     <Statistics title="Upload stats" stats={data} />
     <Statistics stats={data} /> 
+
+    <FriendList friends={friends} />;
 
   </React.StrictMode>
 );
