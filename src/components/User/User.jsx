@@ -46,16 +46,11 @@ UserProfile.propTypes = {
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  // stats.followers: PropTypes.number,
-  // stats.views: PropTypes.number,
-  // stats.likes: PropTypes.number,
-
-  // arrayWithShape: React.PropTypes.arrayOf(React.PropTypes.shape({
-  //   color: React.PropTypes.string.isRequired,
-  //   fontSize: React.PropTypes.number.isRequired,
-  // })).isRequired,
-
+  followers: PropTypes.number,
+  views: PropTypes.number,
+  likes: PropTypes.number,
 };
 
+// stats:PropTypes.objectOf(PropTypes.number).isRequired,
 
 export default UserProfile;

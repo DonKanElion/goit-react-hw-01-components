@@ -1,4 +1,4 @@
-// import PropTypes from  'prop-types';
+import PropTypes from 'prop-types';
 
 const FriendList = ({ friends }) => {
     return (
@@ -6,15 +6,15 @@ const FriendList = ({ friends }) => {
 
             <ul class="friend-list">
 
-            {friends.map(e => (
+            {friends.map( ({ id, avatar, name, isOnline }) => (
                 <li class="item" 
-                key={e.id} >
+                key={id} >
 
                 <span class="status">
-                {e.isOnline ? "✅": "❌"}
+                {isOnline ? "✅": "❌"}
                 </span>
-                <img class="avatar" src={e.avatar} alt="User avatar" width="48" />
-                <p class="name">{e.name}</p>
+                <img class="avatar" src={avatar} alt="User avatar" width="48" />
+                <p class="name">{name}</p>
                 </li>
             ))}
             
@@ -22,6 +22,14 @@ const FriendList = ({ friends }) => {
             
         </div>
     )
+}
+
+
+FriendList.propTypes = {
+avatar: PropTypes.string,
+name: PropTypes.string,
+isOnline: PropTypes.string,
+id: PropTypes.bool,
 }
 
 export default FriendList;

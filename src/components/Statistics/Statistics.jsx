@@ -1,4 +1,4 @@
-// import PropTypes from  'prop-types';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ title, stats }) => {
   return (
@@ -9,15 +9,22 @@ const Statistics = ({ title, stats }) => {
         {title && <h2 class="title">{title}</h2>}
 
         <ul class="stat-list">
-            {stats.map(e => (
-            <li class="item" key={e.id}>
-            <span class="label">{e.label}</span>
-            <span class="percentage">{e.percentage}</span>
+            {stats.map( ({ id, label, percentage })=> (
+            <li class="item" key={id}>
+            <span class="label">{label}</span>
+            <span class="percentage">{percentage}</span>
             </li>
             ))}
         </ul>
         </section>;
   </div>);
 };
+
+Statistics.propTypes = {
+title: PropTypes.string,
+id: PropTypes.string,
+label: PropTypes.string,
+percentage: PropTypes.number,
+}
 
 export default Statistics;

@@ -1,7 +1,6 @@
-// import PropTypes from 'proto-types';
+import PropTypes from 'prop-types';
 
-
-const TransactionHistory = ({ id, type, amount, currency, items }) => {
+const TransactionHistory = ({ items }) => {
     return (
         <div className="container">
 
@@ -14,12 +13,12 @@ const TransactionHistory = ({ id, type, amount, currency, items }) => {
             </tr>
         </thead>
         
-        {items.map(e => (
+        {items.map( ({ id, type, amount, currency }) => (
                <tbody key={id} >
                <tr>
-               <td>{e.type}</td>
-               <td>{e.amount}</td>
-               <td>{e.currency}</td>
+               <td>{type}</td>
+               <td>{amount}</td>
+               <td>{currency}</td>
                </tr>
            </tbody>
         ))}
@@ -28,6 +27,13 @@ const TransactionHistory = ({ id, type, amount, currency, items }) => {
 
         </div>
     )
+}
+
+TransactionHistory.propTypes = {
+    id: PropTypes.string,
+    type: PropTypes.string,
+    amount: PropTypes.number,
+    currency: PropTypes.string,
 }
 
 export default TransactionHistory;
