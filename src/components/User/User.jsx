@@ -15,7 +15,7 @@ const UserProfile = ({
  }) => {
 
   return (
-    <div class="container">
+    <div className="container">
       <div className={classNames(styles.profile)}>
       <div className={classNames(styles.description)}>
         <img src={avatar} alt="User avatar" className={classNames(styles.avatar)} />

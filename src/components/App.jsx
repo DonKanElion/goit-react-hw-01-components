@@ -3,7 +3,7 @@
 
 export const App = () => {
   return (
-    <div class="container"
+    <div className="container"
       style={{
         display: 'flex',
         justifyContent: 'center',
