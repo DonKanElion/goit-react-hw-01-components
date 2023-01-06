@@ -1,3 +1,6 @@
+// import user from '../path/user.json';
+// import UserProfile from '../components/User/User';
+
 export const App = () => {
   return (
     <div class="container"
@@ -11,6 +14,18 @@ export const App = () => {
       }}
     >
       React 🍓 homework components 🧘
+
+      {/* <UserProfile 
+      username={user.username}
+      tag={user.tag}
+      location={user.location}
+      avatar={user.avatar}
+      followers={user.stats.followers}
+      views={user.stats.views}
+      likes={user.stats.likes}
+    /> */}
+
     </div>
+
   );
 };
