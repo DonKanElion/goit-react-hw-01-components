@@ -1,6 +1,4 @@
-// import React from 'react';
 import PropTypes from 'prop-types';
-
 import classNames from 'classnames';
 import styles from './FriendList.module.css'
 
@@ -8,18 +6,10 @@ const FriendListItem = ({friends}) => {
     return (
        friends.map( ({ id, avatar, name, isOnline }) => (
 
-            // classNames('foo', { bar: true }); // => 'foo bar'
-        //   classNames({ [`btn-${buttonType}`]: true });
-
-        // <span className={isOnline ? css.statusOnline : css.statusOffline}></span>           
-
-        // {isOnline ? "styles.isOnline"}
-
-        // <li className={classNames('styles.item, ' + (isOnline ? 'styles.isOnline':''))}   ✅
-
             <li className={classNames(styles.item, styles.isOnline)}
 
-            // <li className={classNames('styles.item' + (isOnline ? ', styles.isOnline':''))} 
+
+            // <li className={classNames('styles.item', (isOnline ? 'styles.isOnline':''))}
 
                     key={id} >
 

@@ -21,7 +21,7 @@ const Statistics = ({ title, stats }) => {
             ))}
 
         </ul>
-        </section>;
+        </section>
   </div>);
 };
 
