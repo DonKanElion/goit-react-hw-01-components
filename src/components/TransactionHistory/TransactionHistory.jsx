@@ -15,16 +15,16 @@ const TransactionHistory = ({ items }) => {
             <th>Currency</th>
             </tr>
         </thead>
-        
-        {items.map( ({ id, type, amount, currency }) => (
-               <tbody key={id} >
-               <tr>
-               <td>{type}</td>
-               <td>{amount}</td>
-               <td>{currency}</td>
-               </tr>
-           </tbody>
-        ))}
+
+        <tbody>
+            {items.map( ({ id, type, amount, currency }) => (
+                <tr key={id}>
+                <td>{type}</td>
+                <td>{amount}</td>
+                <td>{currency}</td>
+                </tr>
+            ))}
+        </tbody>
      
         </table>
 
@@ -33,10 +33,14 @@ const TransactionHistory = ({ items }) => {
 }
 
 TransactionHistory.propTypes = {
-    id: PropTypes.string,
-    type: PropTypes.string,
-    amount: PropTypes.number,
-    currency: PropTypes.string,
+    items: PropTypes.arrayOf(PropTypes.exact({
+        id: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        amount: PropTypes.string.isRequired,
+        currency: PropTypes.string.isRequired,
+        })).isRequired,
 }
 
 export default TransactionHistory;
+
+// items: PropTypes.arrayOf(PropTypes.string).isRequired, - Помилка. 

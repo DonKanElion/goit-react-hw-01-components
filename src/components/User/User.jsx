@@ -4,15 +4,14 @@ import classNames from 'classnames';
 import defaultImages from '../default.jpeg';
 import styles from './User.module.css';
 
-const UserProfile = ({ 
-  username,
-  tag,
-  location,
-  avatar = defaultImages,
+const UserProfile = ( { username, tag, location,
+  avatar = defaultImages, stats } ) => {
+
+const {  
   followers,
   views,
   likes,
- }) => {
+} = stats;
 
   return (
     <div className="container">
@@ -44,15 +43,11 @@ const UserProfile = ({
 };
 
 UserProfile.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  followers: PropTypes.number,
-  views: PropTypes.number,
-  likes: PropTypes.number,
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats:PropTypes.objectOf(PropTypes.number).isRequired,
 };
-
-// stats:PropTypes.objectOf(PropTypes.number).isRequired,
 
 export default UserProfile;
