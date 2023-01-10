@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import FriendListItem from './FriendListItem';
@@ -18,15 +17,5 @@ const FriendList = ({ friends  }) => {
         </div>
     )
 };
-
-// FriendListItem.propTypes = {
-//     friends: PropTypes.exact({
-//         avatar: PropTypes.string.isRequired,
-//         name: PropTypes.string.isRequired,
-//         isOnline: PropTypes.string.isRequired,
-//         id: PropTypes.bool.isRequired,
-//     }).isRequired,
-// };
-
 
 export default FriendList;

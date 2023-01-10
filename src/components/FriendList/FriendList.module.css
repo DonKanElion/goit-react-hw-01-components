@@ -4,8 +4,7 @@
     margin-right: auto;
     }
 
-
-.item{
+/* .item{
     display: flex;
     align-items: center;
     
@@ -17,20 +16,15 @@
     border-radius: 5px;
     border: 1px solid gray;
     background-color: #fff;
-    }
+    } */
     
-    .item:last-child{
+    /* .item:last-child{
     margin-bottom: 0;
-    }
+    } */
     
     .status{
     margin-right: 12px;
     }
-
-    .isOnline{
-    background-color: rgba(127, 255, 212, 0.3);
-    border: 1px solid palegreen;
-  }
     
     .avatar{
     width: 48px;
