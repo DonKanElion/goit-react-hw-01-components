@@ -2,33 +2,42 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './FriendList.module.css';
 
-const itemStyle = {
-  display: 'flex',
-  alignItems: 'center',
+// const itemStyle = {
+//   display: 'flex',
+//   alignItems: 'center',
 
-  width: '100%',
-  marginBottom: 16,
-  padding: 10,
+//   width: '100%',
+//   marginBottom: 16,
+//   padding: 10,
 
-  boxShadow: '0 0 5px rgba(0, 0, 0, 0.8)',
-  borderRadius: 5,
-  border: '1px solid gray',
-  backgroundColor: '#fff',
-};
+//   boxShadow: '0 0 5px rgba(0, 0, 0, 0.8)',
+//   borderRadius: 5,
+//   border: '1px solid gray',
+//   backgroundColor: '#fff',
+// };
 
-const getBgColor = isOnline => {
-  if (isOnline) {
-    return 'rgba(127, 255, 212, 0.3)';
-  }
-};
+// const getBgColor = isOnline => {
+//   if (isOnline) {
+//     return 'rgba(127, 255, 212, 0.3)';
+//   }
+// };
 
 const FriendListItem = ({ friends }) => {
   return (
     <ul className={classNames(styles.friend_list)}>
       {friends.map(({ id, avatar, name, isOnline }) => (
         <li
-          style={{ ...itemStyle, backgroundColor: getBgColor(isOnline) }}
+          
+
+         className={classNames(styles.item, {isOnline : isOnline})}
+
+          // className={classNames(styles.item, {styles.isOnline : true})}
+
+          // className={classNames(styles.item, {isOnline ?  "style.isOnline"})}
+
           key={id}
+
+          // style={{ ...itemStyle, backgroundColor: getBgColor(isOnline) }}
         >
           <span className={classNames(styles.status)}>
             {isOnline ? '✅' : '❌'}

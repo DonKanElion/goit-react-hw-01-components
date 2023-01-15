@@ -76,3 +76,7 @@ li {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+.isOnline{
+  background-color: rgba(127, 255, 212, 0.3);
+}
