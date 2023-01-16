@@ -7,7 +7,11 @@ import styles from './FriendList.module.css';
 const FriendList = ({ friends }) => {
   return (
     <div className="container">
-      <FriendListItem friends={friends} />
+
+      <ul className={classNames(styles.friend_list)}>
+        <FriendListItem friends={friends} />
+      </ul>
+      
     </div>
   );
 };
