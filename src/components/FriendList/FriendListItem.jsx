@@ -2,11 +2,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import styles from './FriendList.module.css';
 
-const FriendListItem = ({ friend }) => {
-  const { id, avatar, name, isOnline } = friend;
-
+const FriendListItem = ({ isOnline, avatar, name }) => {
   return (
-    <li className={classNames(styles.item, { isOnline: isOnline })} key={id}>
+    <>
       <span className={classNames(styles.status)}>
         {isOnline ? '✅' : '❌'}
       </span>
@@ -18,7 +16,7 @@ const FriendListItem = ({ friend }) => {
         width="48"
       />
       <p className={classNames(styles.name)}>{name}</p>
-    </li>
+    </>
   );
 };
 
